@@ -1,0 +1,179 @@
+.left {
+  width: 180px;
+  height: 100vh;
+  padding: 20px 13px 10px 13px;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  box-shadow: 1px 0px 0px 0px #e1e1e1;
+  position: relative;
+  z-index: 1;
+  .left-title {
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .left-menu {
+    width: 100%;
+    // height: calc(100vh - 180px);
+    padding: 12px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e5e5;
+    .menu-item {
+      width: 154px;
+      height: 40px;
+      border-radius: 4px;
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      @include flex(flex-start, center, null);
+      img {
+        width: 22px;
+        height: 22px;
+        margin-right: 16px;
+      }
+      &:hover {
+        background: #e9f1ff;
+      }
+    }
+  }
+  .left-star {
+    width: 100%;
+    height: calc(100% - 370px);
+    @include scroll();
+    .star-title,
+    .star-item {
+      width: 154px;
+      height: 40px;
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      @include flex(flex-start, center, null);
+      img {
+        width: 22px;
+        height: 22px;
+        margin-right: 16px;
+      }
+    }
+    .star-item {
+      padding-left: 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+      img {
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+  }
+  .left-bottom {
+    width: 100%;
+    height: 32px;
+    font-size: 18px;
+    color: #999999;
+    line-height: 32px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    bottom: 20px;
+    @include flex(flex-start, center, null);
+    .bottom-icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+    }
+  }
+}
+.title-text {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+
+  cursor: pointer;
+  @include flex(flex-start, center, null);
+  .title-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+    flex-shrink: 0;
+  }
+  .title-arrow {
+    width: 12px;
+    height: 7px;
+    margin-left: 7px;
+  }
+}
+.left-title-box {
+  width: 249px;
+  max-height: calc(100vh - 150px);
+  padding: 20px;
+  box-sizing: border-box;
+  @include scroll();
+  @include noScrollbar();
+
+  .left-user {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    @include flex(flex-start, center, null);
+    .user-avatar {
+      width: 55px;
+      height: 55px;
+      margin-right: 18px;
+      flex-shrink: 0;
+    }
+    // .user-name {
+    // }
+  }
+  .title-text {
+    border-radius: 4px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    &:hover {
+      background: #e9f1ff;
+    }
+  }
+  .title-button {
+    width: 100%;
+    height: 70px;
+    margin-top: 15px;
+    @include flex(center, center, null);
+  }
+}
+
+.space-create {
+  width: 600px;
+  height: 400px;
+  .create-logo {
+    width: 100%;
+    height: 300px;
+    @include flex(center, center, null);
+    .logo-box {
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      .logo-item {
+        font-size: 50px;
+        color: #ebebeb;
+      }
+    }
+  }
+  .create-name {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0px;
+  }
+}

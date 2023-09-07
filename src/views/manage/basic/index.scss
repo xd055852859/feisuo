@@ -1,0 +1,36 @@
+.basic {
+  width: 100%;
+  height: 100%;
+  @include flex(center, center, wrap);
+  .basic-container {
+    width: 800px;
+    height: calc(100% - 70px);
+    .basic-logo {
+      width: 100%;
+      height: 300px;
+      @include flex(center, center, null);
+      .logo-box {
+        width: 250px;
+        height: 250px;
+        border-radius: 12px;
+        overflow: hidden;
+        .logo-item {
+          font-size: 50px;
+          color: #ebebeb;
+        }
+      }
+    }
+    .basic-input {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 15px;
+      @include flex(center, center, null);
+      > div:nth-child(1) {
+        width: 120px;
+      }
+      > div:nth-child(2) {
+        width: calc(100% - 120px);
+      }
+    }
+  }
+}

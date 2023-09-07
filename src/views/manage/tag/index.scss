@@ -1,0 +1,40 @@
+.tag {
+  .tag-header {
+    @include p-number(0px, 37px);
+  }
+  .tag-table {
+    @include p-number(20px, 37px);
+    @include scroll();
+    .tag-logo {
+      width: 100%;
+      height: 100%;
+      @include flex(center, center, null);
+      .logo-box {
+        width: 250px;
+        height: 150px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.tag-create {
+  .tag-logo {
+    width: 100%;
+    height: 300px;
+    @include flex(center, center, null);
+    .logo-box {
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      .logo-item {
+        font-size: 50px;
+        color: #ebebeb;
+      }
+    }
+  }
+}

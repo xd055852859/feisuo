@@ -1,0 +1,13 @@
+.effects {
+  width: 100%;
+  height: 100%;
+  .effects-box {
+    width: 100%;
+    height: 100%;
+    @include flex(center, center, null);
+    .effects-canvas {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+html,
+body,
+#app {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.dp-center {
+  display: flex;
+  justify-content: center;
+}
+.dp--center {
+  display: flex;
+  align-items: center;
+}
+.dp-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dp-space-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//手型
+.icon-point {
+  cursor: pointer;
+}
+
+.tab-nav {
+  padding: 0px 15px;
+}
+.single-to-long {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// .footer {
+//   width: 100%;
+//   height: 50px;
+//   background: var(--talk-footer-color);
+//   position: relative;
+//   z-index: 1;
+//   > div {
+//     height: 100%;
+//     img {
+//       height: 60%;
+//       margin-right: 7px;
+//     }
+//   }
+// }
+
+.box {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  // @include p-number(20px, 20px);
+
+  .box-header {
+    width: 100%;
+    height: 70px;
+    @include flex(space-between, center, null);
+  }
+  .box-table {
+    height: calc(100vh - 250px);
+    @include scroll();
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+    .box-img {
+      width: 100%;
+      @include flex(null, center, wrap);
+      .box-img-item {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-right: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .box-footer {
+    width: 100%;
+    height: 65px;
+    @include flex(flex-end, center, null);
+  }
+  .box-container {
+    width: 100%;
+    height: calc(100vh - 70px);
+    // @include noScrollbar();
+    @include scroll();
+  }
+}
+.common-logo {
+  width: 100%;
+  height: 100%;
+  @include flex(center, center, null);
+  .logo-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.upload-button {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  @include flex(center, center, null);
+  .upload-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .upload-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .upload-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    right: 5px;
+    display: none;
+    cursor: pointer;
+  }
+  &:hover {
+    .upload-close {
+      @include flex(center, center, null);
+    }
+  }
+}
+.upload-img-button {
+  box-shadow: 0 0 0 1px #dcdfe6;
+  border-radius: 4px;
+}
+.form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  @include scroll();
+  > div {
+    .form-left {
+      width: calc(100% - 100px);
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    .form-right {
+      width: 90px;
+      @include flex(flex-end, center, null);
+    }
+    width: 100%;
+    min-height: 55px;
+    margin-bottom: 10px;
+    @include flex(space-between, center, wrap);
+  }
+  .form-area {
+    align-items: flex-start;
+    .form-single-line {
+      width: 100%;
+      text-align: right;
+      margin: 5px 0px;
+    }
+  }
+  .form-save {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    bottom: 5px;
+    @include flex(center, center, null);
+  }
+}
+.info-footer {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  @include flex(center, center, null);
+}
+:focus {
+  outline: 0;
+}
+.ant-drawer-header {
+  padding: 15px !important;
+}

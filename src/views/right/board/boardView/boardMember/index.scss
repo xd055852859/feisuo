@@ -1,0 +1,40 @@
+.member {
+  width: 100%;
+  height: calc(100vh - 120px);
+  padding:12px 27px;
+  box-sizing: border-box;
+  @include scroll();
+  .member-item {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 18px;
+    @include flex(space-between, center, null);
+    .member-item-left {
+      height: 60px;
+      @include flex(flex-start, center, null);
+      .member-item-avatar {
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        margin-right: 8px;
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .member-item-nickName {
+        width: 150px;
+        height: 70px;
+        font-size: 18px;
+        color: #000000;
+        line-height: 70px;
+      }
+    }
+    .member-item-role {
+      color: #606266;
+      font-size: 18px;
+    }
+  }
+}

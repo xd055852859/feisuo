@@ -1,0 +1,6 @@
+.right {
+  width: calc(100vw - 180px);
+  height: 100vh;
+  overflow: auto;
+  @include noScrollbar();
+}

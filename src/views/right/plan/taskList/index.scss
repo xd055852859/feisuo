@@ -1,0 +1,45 @@
+.taskList {
+  width: 100%;
+  height: 100vh;
+ 
+  background: #f9f9f9;
+  .taskList-input {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+    padding: 12px 27px;
+    box-sizing: border-box;
+    .taskList-input-editor {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #3f8df7;
+      border-radius: 4px;
+    }
+    .taskList-input-button {
+      position: absolute;
+      z-index: 2;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  .taskList-filter {
+    width: 100%;
+    height: 50px;
+    margin: 15px 0px;
+    padding: 12px 27px;
+    box-sizing: border-box;
+    @include flex(space-between, center, null);
+    .taskList-filter-left {
+    }
+    .taskList-filter-right {
+    }
+  }
+  .taskList-container {
+    width: 100%;
+    height: calc(100% - 330px);
+    padding: 12px 27px;
+    box-sizing: border-box;
+    @include scroll();
+  }
+}

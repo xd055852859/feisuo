@@ -1,0 +1,20 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-size: $commonFontSize;
+  color: #333;
+  textarea {
+    background-color: #fff;
+    color: #333;
+  }
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  background: $commonColor;
+  border-radius: 5px;
+}

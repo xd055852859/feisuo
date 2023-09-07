@@ -1,0 +1,54 @@
+.member {
+  .member-header {
+    @include p-number(0px, 37px);
+  }
+  .member-table {
+    @include p-number(20px, 37px);
+    @include scroll();
+    .member-logo {
+      width: 100%;
+      height: 100%;
+      @include flex(center, center, null);
+      .logo-box {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.member-search {
+  .member-search-title {
+    width:100%;
+    height:50px;
+    margin-bottom: 10px;
+  }
+  .member-search-container {
+    width: 100%;
+    height: 50vh;
+    @include scroll();
+    .member-search-item {
+      width: 100%;
+      height: 70px;
+      @include flex(space-between, center, null);
+      .member-search-left {
+        @include flex(space-between, center, null);
+        .member-search-avatar {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+        }
+      }
+      .member-search-right {
+        height: 100%;
+        @include flex(center, center, null);
+      }
+    }
+  }
+}

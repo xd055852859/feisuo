@@ -1,0 +1,140 @@
+.board {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  .board-set {
+    width: 100%;
+    height: 30px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    @include flex(flex-end, center, null);
+    .set-icon {
+      cursor: pointer;
+      font-size: 25px;
+    }
+  }
+  .board-box {
+    width: 100%;
+    height: calc(100% - 65px);
+    padding: 20px 37px;
+    box-sizing: border-box;
+    @include flex(flex-start, flex-start, null);
+    @include scroll();
+    .board-item {
+      width: 407px;
+      height: 86px;
+      background: #ffffff;
+      flex-shrink: 0;
+      border-radius: 8px;
+      margin-bottom: 22px;
+      padding: 13px;
+      box-sizing: border-box;
+      margin-right: 22px;
+      .item-top {
+        width: 100%;
+        height: 30px;
+        font-size: 22px;
+        margin-bottom: 10px;
+        @include flex(space-between, center, null);
+        .top-left {
+          width: 28px;
+          height: 28px;
+          background: #f4f4f4;
+          border-radius: 15px;
+          margin-right: 6px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .top-right {
+          width: calc(100% - 34px);
+          height: 100%;
+          font-size: 16px;
+          color: #000000;
+          line-height: 22px;
+          @include flex(flex-start, center, null);
+        }
+        .top-button {
+          .top-icon {
+            display: none;
+          }
+        }
+      }
+      .item-bottom {
+        width: 100%;
+        height: 20px;
+        font-size: 12px;
+        font-family: PingFang SC, PingFang SC-Regular;
+        font-weight: 400;
+        text-align: left;
+        color: #999999;
+        line-height: 17px;
+        padding-left: 34px;
+        box-sizing: border-box;
+      }
+      &:nth-child(4n) {
+        margin-right: 0px;
+      }
+      &:hover {
+        box-shadow: 0px 2px 6px 0px rgba(178, 178, 178, 0.66);
+        .item-top {
+          .top-button {
+            .top-icon {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.board-create {
+  .board-logo {
+    width: 100%;
+    height: 300px;
+    @include flex(center, center, null);
+    .logo-box {
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      .logo-item {
+        font-size: 50px;
+        color: #ebebeb;
+      }
+    }
+  }
+  .board-name {
+  }
+}
+.tag-box {
+  width: 100%;
+  height:80vh;
+  align-content: flex-start;
+  @include scroll();
+  @include flex(flex-start, center, wrap);
+  .tag-box-item {
+    width: 360px;
+    height: 290px;
+    margin-right:20px;
+    margin-bottom:20px;
+    cursor: pointer;
+    .tag-box-icon {
+      width: 360px;
+      height: 240px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .tag-box-name {
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      margin-top: 10px;
+    }
+  }
+}
